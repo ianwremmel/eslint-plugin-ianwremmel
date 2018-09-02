@@ -18,5 +18,8 @@ module.exports = {
     ecmaVersion: 5,
     sourceType: 'script'
   },
-  plugins: ['import']
+  plugins: ['import'],
+  rules: {
+    'prettier/prettier': ['error', require('../../prettier.json')]
+  }
 };

@@ -8,13 +8,5 @@
   "trailingComma": "none",
   "bracketSpacing": false,
   "jsxBracketSameLine": false,
-  "proseWrap": "always",
-  "overrides": [
-    {
-      "files": "*.md",
-      "options": {
-        "tabWidth": 4
-      }
-    }
-  ]
+  "proseWrap": "always"
 }
