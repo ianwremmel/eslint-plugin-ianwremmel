@@ -1,0 +1,5 @@
+extends:
+  - './src/configs/standard/index.js'
+  - './src/configs/node/index.js'
+parserOptions:
+  sourceType: 'script'

@@ -1,0 +1,62 @@
+{
+  "name": "@ianwremmel/eslint-plugin-ianwremmel",
+  "version": "0.0.0-development",
+  "description": "",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ianwremmel/eslint-plugin-ianwremmel.git"
+  },
+  "scripts": {
+    "commitmsg": "npm run --silent lint:commitmsg",
+    "lint": "npm-run-all lint:types lint:changelog",
+    "lint:changelog": "commitlint --from origin/master --to HEAD",
+    "lint:commitmsg": "commitlint -e",
+    "lint:eslint": "eslint --ignore --ignore-path .gitignore",
+    "lint:js": "npm run --silent lint:eslint -- .",
+    "precommit": "lint-staged",
+    "semantic-release": "semantic-release",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "keywords": [
+    "eslint",
+    "eslint-plugin"
+  ],
+  "author": "Ian Remmel <1182361+ianwremmel@users.noreply.github.com>",
+  "license": "MIT",
+  "lint-staged": {
+    "*.js": "npm run lint:eslint -- "
+  },
+  "release": {
+    "verifyConditions": "condition-circle"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^7.1.1",
+    "@commitlint/config-conventional": "^7.1.1",
+    "condition-circle": "^2.0.1",
+    "eslint": "^5.5.0",
+    "eslint-config-prettier": "^3.0.1",
+    "eslint-plugin-comments": "^1.0.0",
+    "eslint-plugin-compat": "^2.5.1",
+    "eslint-plugin-eslint-comments": "^3.0.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-mocha": "^5.2.0",
+    "eslint-plugin-prettier": "^2.6.2",
+    "lint-staged": "^7.2.2",
+    "npm-run-all": "^4.1.3",
+    "prettier": "^1.14.2",
+    "semantic-release": "^15.9.12"
+  },
+  "peerDependencies": {
+    "eslint": "^5.5.0",
+    "eslint-config-prettier": "^3.0.1",
+    "eslint-plugin-compat": "^2.5.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-mocha": "^5.2.0",
+    "eslint-plugin-prettier": "^2.6.2",
+    "prettier": "^1.14.2"
+  }
+}
