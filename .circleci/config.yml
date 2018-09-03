@@ -87,15 +87,12 @@ workflows:
           requires:
             - install
       - test-node-6:
-          context: browser-testing
           requires:
             - install
       - test-node-8:
-          context: browser-testing
           requires:
             - install
       - test-node-10:
-          context: browser-testing
           requires:
             - install
       - release:
