@@ -10,11 +10,10 @@
   "scripts": {
     "build": "npm-run-all build:*",
     "build:readme": "markdown-toc -i --bullets='-' --maxdepth=3  README.md  && prettier --write README.md",
-    "commitmsg": "npm run --silent lint:commitmsg",
+    "commitmsg": "commitlint -e",
+    "eslint": "eslint --ignore --ignore-path .gitignore",
     "lint": "npm-run-all lint:*",
     "lint:changelog": "commitlint --from origin/master --to HEAD",
-    "lint:commitmsg": "commitlint -e",
-    "eslint": "eslint --ignore --ignore-path .gitignore",
     "lint:js": "npm run --silent eslint -- .",
     "precommit": "lint-staged",
     "semantic-release": "semantic-release",
