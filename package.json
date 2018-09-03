@@ -11,14 +11,14 @@
     "build": "npm-run-all build:*",
     "build:readme": "markdown-toc -i --bullets='-' --maxdepth=3  README.md  && prettier --write README.md",
     "commitmsg": "npm run --silent lint:commitmsg",
-    "lint": "npm-run-all lint:types lint:changelog",
+    "lint": "npm-run-all lint:*",
     "lint:changelog": "commitlint --from origin/master --to HEAD",
     "lint:commitmsg": "commitlint -e",
-    "lint:eslint": "eslint --ignore --ignore-path .gitignore",
-    "lint:js": "npm run --silent lint:eslint -- .",
+    "eslint": "eslint --ignore --ignore-path .gitignore",
+    "lint:js": "npm run --silent eslint -- .",
     "precommit": "lint-staged",
     "semantic-release": "semantic-release",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run --silent lint"
   },
   "engines": {
     "node": ">=6"
