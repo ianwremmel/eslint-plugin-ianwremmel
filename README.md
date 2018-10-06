@@ -35,7 +35,7 @@ support plugins in shareable configs, so you'll need to run the following script
 
 ```bash
 (
-  export PKG=@ianwremmel/eslint-config
+  export PKG=@ianwremmel/eslint-plugin-ianwremmel
   npm info "$PKG@latest" peerDependencies --json \
     | command sed 's/[\{\},]//g ; s/: /@/g' \
     | xargs npm install --save-dev "$PKG@latest"
