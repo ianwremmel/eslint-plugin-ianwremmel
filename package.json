@@ -10,12 +10,10 @@
   "scripts": {
     "build": "npm-run-all build:*",
     "build:readme": "markdown-toc -i --bullets='-' --maxdepth=3  README.md  && prettier --write README.md",
-    "commitmsg": "commitlint -e",
     "eslint": "eslint --ignore --ignore-path .gitignore",
     "lint": "npm-run-all lint:*",
     "lint:changelog": "commitlint --from origin/master --to HEAD",
     "lint:js": "npm run --silent eslint -- .",
-    "precommit": "lint-staged",
     "semantic-release": "semantic-release",
     "test": "npm run --silent lint"
   },
@@ -29,7 +27,7 @@
   "author": "Ian Remmel <1182361+ianwremmel@users.noreply.github.com>",
   "license": "MIT",
   "lint-staged": {
-    "*.js": "npm run lint:eslint -- "
+    "*.js": "npm run eslint -- "
   },
   "release": {
     "verifyConditions": "condition-circle"
@@ -43,6 +41,7 @@
     "eslint-plugin-compat": "^2.5.1",
     "eslint-plugin-eslint-comments": "^3.0.1",
     "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-markdown": "^1.0.0-beta.6",
     "eslint-plugin-mocha": "^5.2.0",
     "eslint-plugin-prettier": "^3.0.0",
     "husky": "^1.0.0",
@@ -59,8 +58,15 @@
     "eslint-plugin-compat": "^2.5.1",
     "eslint-plugin-eslint-comments": "^3.0.1",
     "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-markdown": "^1.0.0-beta.6",
     "eslint-plugin-mocha": "^5.2.0",
     "eslint-plugin-prettier": "^3.0.0",
     "prettier": "^1.14.2"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -e",
+      "pre-commit": "lint-staged"
+    }
   }
 }
