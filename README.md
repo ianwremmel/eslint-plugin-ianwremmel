@@ -44,32 +44,42 @@ support plugins in shareable configs, so you'll need to run the following script
 
 ## Usage
 
--   base: contains the majority of the rules, but targets es5
--   browser: builds on base with browser-specific overrides
--   node: builds on base with node-specific overrides
--   standard: adds es6 and style config to base
--   universal: combines standard, node, and browser (in that order)
+-   `node`: node scripts
 
-In general, you'll want to use standard plus an environment-specific config:
+    ```yaml
+    extends:
+        - 'plugin:@ianwremmel/ianwremmel/node'
+    ```
 
-```yml
-extends:
-    - plugin:@ianwremmel/ianwremmel/standard
-    - plugin:@ianwremmel/ianwremmel/node
-```
+-   `modern`: in browsers via transpilation (be it webpack, webpacker, babel, or
+    typescript)
 
-```yml
-extends:
-    - plugin:@ianwremmel/ianwremmel/standard
-    - plugin:@ianwremmel/ianwremmel/browser
-```
+    ```yaml
+    extends:
+        - 'plugin:@ianwremmel/ianwremmel/modern'
+    ```
 
-Though for universal libraries, you can use just `universal`
+-   `legacy`: for browsers without transpilation or polyfills
 
-```yml
-extends:
-    - plugin:@ianwremmel/ianwremmel/universal
-```
+    ```yaml
+    extends:
+        - 'plugin:@ianwremmel/ianwremmel/legacy'
+    ```
+
+-   `universal`: for libraries that'll run in browsers or node. transpilation in
+    browser is assumed
+
+    ```yaml
+    extends:
+        - 'plugin:@ianwremmel/ianwremmel/universal'
+    ```
+
+-   `common`: use as a base when none of the others will do
+
+    ```yaml
+    extends:
+        - 'plugin:@ianwremmel/ianwremmel/common'
+    ```
 
 ## Maintainer
 

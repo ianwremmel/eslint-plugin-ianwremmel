@@ -13,6 +13,6 @@ module.exports = {
     'import/no-named-as-default-member': 'warn',
     'import/no-unresolved': ['error', {commonjs: true}],
     'import/order': ['error', {'newlines-between': 'always'}],
-    'import/unambiguous': 'error'
+    'import/unambiguous': 'off'
   }
 };

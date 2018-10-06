@@ -1,13 +1,12 @@
 'use strict';
 
+const {loadRules} = require('../../lib/helpers');
+
 module.exports = {
   env: {
-    browser: false,
     node: true
   },
-  extends: ['../base'].map(require.resolve),
-  parserOptions: {
-    ecmaVersion: 2018,
-    sourceType: 'script'
-  }
+  extends: ['../common', '../common-modern']
+    .map(require.resolve)
+    .concat(loadRules(__dirname))
 };

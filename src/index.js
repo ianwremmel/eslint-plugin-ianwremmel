@@ -2,10 +2,9 @@
 
 module.exports = {
   configs: {
-    base: require('./configs/base'),
-    browser: require('./configs/browser'),
-    node: require('./configs/node'),
-    standard: require('./configs/standard'),
-    universal: require('./configs/universal')
+    common: require('./configs/common'),
+    legacy: require('./configs/legacy'),
+    modern: require('./configs/modern'),
+    node: require('./configs/node')
   }
 };

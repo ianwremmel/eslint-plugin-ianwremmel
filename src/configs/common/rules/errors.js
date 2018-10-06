@@ -3,7 +3,6 @@
 module.exports = {
   rules: {
     'no-extra-parens': 'error',
-    'no-template-curly-in-string': 'error',
     'require-atomic-updates': 'error',
     'valid-jsdoc': [
       'error',

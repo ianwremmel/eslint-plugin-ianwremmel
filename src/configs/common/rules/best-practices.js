@@ -10,6 +10,7 @@ module.exports = {
     'no-alert': 'error',
     'no-else-return': 'error',
     'no-invalid-this': 'error',
+    'no-warning-comments': 'error',
     'wrap-iife': 'error',
     yoda: 'error'
   }
