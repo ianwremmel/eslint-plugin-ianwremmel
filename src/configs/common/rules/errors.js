@@ -12,21 +12,21 @@ module.exports = {
           argument: 'param',
           fires: 'emits',
           return: 'returns',
-          virtual: 'abstract'
+          virtual: 'abstract',
         },
         preferType: {
           Boolean: 'boolean',
           Number: 'number',
           String: 'string',
           function: 'Function',
-          object: 'Object'
+          object: 'Object',
         },
         requireParamDescription: false,
         requireParamType: true,
         requireReturn: false,
         requireReturnDescription: false,
-        requireReturnType: true
-      }
-    ]
-  }
+        requireReturnType: true,
+      },
+    ],
+  },
 };

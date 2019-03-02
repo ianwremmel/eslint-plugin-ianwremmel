@@ -2,6 +2,6 @@
 
 module.exports = {
   rules: {
-    'prefer-object-spread': 'error'
-  }
+    'prefer-object-spread': 'error',
+  },
 };

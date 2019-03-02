@@ -2,6 +2,6 @@
 
 module.exports = {
   rules: {
-    'no-template-curly-in-string': 'error'
-  }
+    'no-template-curly-in-string': 'error',
+  },
 };

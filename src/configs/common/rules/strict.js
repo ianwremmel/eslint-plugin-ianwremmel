@@ -2,6 +2,6 @@
 
 module.exports = {
   rules: {
-    strict: ['error', 'safe']
-  }
+    strict: ['error', 'safe'],
+  },
 };

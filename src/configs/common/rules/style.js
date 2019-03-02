@@ -5,8 +5,8 @@ module.exports = {
     camelcase: [
       'error',
       {
-        properties: 'never'
-      }
+        properties: 'never',
+      },
     ],
     indent: [
       'error',
@@ -15,16 +15,16 @@ module.exports = {
         // Honestly, I don't care where switch cases go, but most editors seem to
         // indent them differently from the eslint default, so I'm overriding the
         // default here.
-        SwitchCase: 1
-      }
+        SwitchCase: 1,
+      },
     ],
     'new-cap': [
       'error',
       {
         capIsNew: true,
         capIsNewExceptions: ['S', '^express\\.Router$'],
-        newIsCap: true
-      }
+        newIsCap: true,
+      },
     ],
     quotes: ['error', 'single', {avoidEscape: true}],
     'require-jsdoc': [
@@ -35,10 +35,10 @@ module.exports = {
           ClassDeclaration: true,
           FunctionDeclaration: true,
           FunctionExpression: true,
-          MethodDefinition: true
-        }
-      }
+          MethodDefinition: true,
+        },
+      },
     ],
-    'sort-keys': 'error'
-  }
+    'sort-keys': 'error',
+  },
 };

@@ -11,6 +11,6 @@ module.exports = {
     'no-useless-constructor': 'error',
     'no-useless-rename': 'error',
     'symbol-description': 'error',
-    'template-curly-spacing': ['error', 'never']
-  }
+    'template-curly-spacing': ['error', 'never'],
+  },
 };
