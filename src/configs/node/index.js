@@ -4,9 +4,9 @@ const {loadRules} = require('../../lib/helpers');
 
 module.exports = {
   env: {
-    node: true
+    node: true,
   },
   extends: ['../common', '../common-modern']
     .map(require.resolve)
-    .concat(loadRules(__dirname))
+    .concat(loadRules(__dirname)),
 };

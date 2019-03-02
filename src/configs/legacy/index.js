@@ -8,7 +8,7 @@ module.exports = {
     .concat(loadRules(__dirname)),
   parserOptions: {
     ecmaVersion: 5,
-    sourceType: 'script'
+    sourceType: 'script',
   },
-  rules: {}
+  rules: {},
 };

@@ -12,6 +12,6 @@ module.exports = {
     'no-invalid-this': 'error',
     'no-warning-comments': 'error',
     'wrap-iife': 'error',
-    yoda: 'error'
-  }
+    yoda: 'error',
+  },
 };

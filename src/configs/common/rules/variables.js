@@ -9,8 +9,8 @@ module.exports = {
       {
         classes: true,
         functions: false,
-        variables: true
-      }
-    ]
-  }
+        variables: true,
+      },
+    ],
+  },
 };

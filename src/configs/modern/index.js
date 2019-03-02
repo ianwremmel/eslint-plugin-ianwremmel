@@ -7,6 +7,6 @@ module.exports = {
     .map(require.resolve)
     .concat(loadRules(__dirname)),
   parserOptions: {
-    sourceType: 'module'
-  }
+    sourceType: 'module',
+  },
 };

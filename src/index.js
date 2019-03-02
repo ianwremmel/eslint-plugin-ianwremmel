@@ -5,6 +5,6 @@ module.exports = {
     common: require('./configs/common'),
     legacy: require('./configs/legacy'),
     modern: require('./configs/modern'),
-    node: require('./configs/node')
-  }
+    node: require('./configs/node'),
+  },
 };
