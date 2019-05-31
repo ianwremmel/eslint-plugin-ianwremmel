@@ -33,7 +33,7 @@
     "verifyConditions": "condition-circle"
   },
   "devDependencies": {
-    "@commitlint/cli": "^7.1.1",
+    "@commitlint/cli": "^8.0.0",
     "@commitlint/config-conventional": "^7.1.1",
     "condition-circle": "^2.0.1",
     "eslint": "^5.5.0",
