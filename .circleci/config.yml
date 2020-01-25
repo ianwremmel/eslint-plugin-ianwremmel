@@ -1,26 +1,23 @@
 restore_cache: &restore_cache
   keys:
-    - node-modules-{{ arch }}-{{ .Environment.CIRCLE_JOB }}-{{ .Branch }}-{{
-      checksum "package.json" }}
-    - node-modules-{{ arch }}-{{ .Environment.CIRCLE_JOB }}-{{ checksum
-      "package.json" }}
+    - node-modules-{{ arch }}-{{ .Environment.CIRCLE_JOB }}-{{ .Branch }}-{{ checksum "package.json" }}
+    - node-modules-{{ arch }}-{{ .Environment.CIRCLE_JOB }}-{{ checksum "package.json" }}
 
 save_cache: &save_cache
-  key:
-    node-modules-{{ arch }}-{{ .Environment.CIRCLE_JOB }}-{{ .Branch }}-{{
-    checksum "package.json" }}
+  key: node-modules-{{ arch }}-{{ .Environment.CIRCLE_JOB }}-{{ .Branch }}-{{ checksum "package.json" }}
   paths:
     - node_modules
 
 docker: &docker
-  - image: 'node:10'
+  - image: 'node:12'
 
 steps: &steps
   - checkout
-  - attach_workspace:
-      at: '.'
+  - restore_cache: *restore_cache
+  - run: npm install
   - run: npm run build
   - run: npm test
+  - save_cache: *save_cache
   - store_test_results:
       path: reports
   - store_artifacts:
@@ -29,79 +26,61 @@ steps: &steps
 version: 2
 
 jobs:
-  install:
-    docker: *docker
-    environment:
-      NPM_CONFIG_LOGLEVEL: warn
-    steps:
-      - checkout
-      - restore_cache: *restore_cache
-      - run: npm install
-      - save_cache: *save_cache
-      - persist_to_workspace:
-          root: .
-          paths:
-            - node_modules
-
   lint:
     docker: *docker
     steps:
       - checkout
-      - attach_workspace:
-          at: '.'
+      - restore_cache: *restore_cache
+      - run: npm install
       - run: npm run lint
-
-  test-node-6:
-    docker: *docker
-    steps: *steps
+      - save_cache: *save_cache
 
   test-node-8:
-    docker: *docker
+    docker: 
+      - image: node:8
     steps: *steps
 
   test-node-10:
-    docker: *docker
+    docker: 
+      - image: node:10
+    steps: *steps
+
+  test-node-12:
+    docker: 
+      - image: node:12
     steps: *steps
 
   release:
-    docker: *docker
+    docker:
+      - image: node:12
     environment:
       NODE_ENV: production
     steps:
       - checkout
-      - attach_workspace:
-          at: '.'
+      - restore_cache: *restore_cache
+      - run: npm install
       - deploy:
-          name: Semantic Release
           command: |
             echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' > ./.npmrc
-            npm run build
+            npm whoami
             npm run semantic-release
+      - save_cache: *save_cache
 
 workflows:
   version: 2
   build:
     jobs:
-      - install
-      - lint:
-          requires:
-            - install
-      - test-node-6:
-          requires:
-            - install
-      - test-node-8:
-          requires:
-            - install
-      - test-node-10:
-          requires:
-            - install
+      - lint
+      - test-node-8
+      - test-node-10
+      - test-node-12
       - release:
           context: semantic-release
           filters:
             branches:
               only: master
           requires:
-            - test-node-6
             - test-node-8
             - test-node-10
+            - test-node-12
             - lint
