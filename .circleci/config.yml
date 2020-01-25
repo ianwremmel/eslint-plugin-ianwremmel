@@ -53,8 +53,6 @@ jobs:
   release:
     docker:
       - image: node:12
-    environment:
-      NODE_ENV: production
     steps:
       - checkout
       - restore_cache: *restore_cache
