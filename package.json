@@ -30,6 +30,9 @@
     "*.js": "npm run eslint -- "
   },
   "release": {
+    "branches": [
+      "master"
+    ],
     "verifyConditions": "condition-circle"
   },
   "devDependencies": {
