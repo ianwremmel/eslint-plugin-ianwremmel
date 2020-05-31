@@ -13,10 +13,12 @@ module.exports = {
       parserOptions: {
         impliedStrict: true,
       },
-      //  These rules cannot be satisfied by fenced code blocks as they are
-      //  effectively partial JavaScript files.
+      // These rules just don't make sense when checking what is, effectively,
+      // part of a file
       rules: {
         'eol-last': 'off',
+        'no-undef': 'off',
+        'require-jsdoc': 'off',
         strict: 'off',
         'unicode-bom': 'off',
       },
