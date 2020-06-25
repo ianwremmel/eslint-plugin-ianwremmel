@@ -13,7 +13,7 @@ module.exports = {
     process: false,
   },
   parserOptions: {
-    ecmaVersion: 2018,
+    ecmaVersion: 2019,
     sourceType: 'script',
   },
 };

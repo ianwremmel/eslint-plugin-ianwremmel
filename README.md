@@ -81,6 +81,13 @@ support plugins in shareable configs, so you'll need to run the following script
         - 'plugin:@ianwremmel/ianwremmel/common'
     ```
 
+-   `typescript`: use with modern or universal as appropriate
+
+    ```yaml
+    extends:
+        - 'plugin:@ianwremmel/ianwremmel/typescript'
+    ```
+
 ## Maintainer
 
 [Ian Remmel](https://github.com/ianwremmel)
