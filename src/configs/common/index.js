@@ -17,6 +17,9 @@ module.exports = {
       // part of a file
       rules: {
         'eol-last': 'off',
+        'eslint-comments/no-unused-disable': 'error',
+        'eslint-comments/no-unused-enable': 'error',
+        'eslint-comments/require-description': 'warn',
         'no-undef': 'off',
         'require-jsdoc': 'off',
         strict: 'off',
