@@ -1,16 +1,11 @@
 'use strict';
 
 module.exports = {
-  extends: ['plugin:react-hooks/recommended'],
-  overrides: [
-    {
-      extends: [
-        'plugin:react/recommended',
-        'plugin:jsx-a11y/recommended',
-        'prettier/react',
-      ],
-      files: ['**/*.jsx', '**/*.tsx'],
-    },
+  extends: [
+    'plugin:react-hooks/recommended',
+    'plugin:react/recommended',
+    'plugin:jsx-a11y/recommended',
+    'prettier/react',
   ],
   parserOptions: {
     sourceType: 'module',
