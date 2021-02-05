@@ -60,21 +60,21 @@
     "typescript": "^4.1.2"
   },
   "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": "^4",
-    "@typescript-eslint/parser": "^4",
-    "eslint": "^7",
-    "eslint-config-prettier": "^7",
-    "eslint-plugin-babel": "^5",
-    "eslint-plugin-compat": "^3",
-    "eslint-plugin-eslint-comments": "^3",
-    "eslint-plugin-import": "^2",
-    "eslint-plugin-jsx-a11y": "^6",
-    "eslint-plugin-markdown": "^1",
-    "eslint-plugin-prettier": "^3",
-    "eslint-plugin-react": "^7",
-    "eslint-plugin-react-hooks": "^4",
-    "prettier": "^2",
-    "typescript": "^4"
+    "@typescript-eslint/eslint-plugin": "^4.0.o",
+    "@typescript-eslint/parser": "^4.0.o",
+    "eslint": "^7.0.o",
+    "eslint-config-prettier": "^7.0.o",
+    "eslint-plugin-babel": "^5.0.o",
+    "eslint-plugin-compat": "^3.0.o",
+    "eslint-plugin-eslint-comments": "^3.0.o",
+    "eslint-plugin-import": "^2.0.o",
+    "eslint-plugin-jsx-a11y": "^6.0.o",
+    "eslint-plugin-markdown": "^1.0.o",
+    "eslint-plugin-prettier": "^3.0.o",
+    "eslint-plugin-react": "^7.0.o",
+    "eslint-plugin-react-hooks": "^4.0.o",
+    "prettier": "^2.0.o",
+    "typescript": "^4.0.o"
   },
   "husky": {
     "hooks": {
