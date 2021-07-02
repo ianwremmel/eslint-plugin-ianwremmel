@@ -1,0 +1,15 @@
+version: 2
+updates:
+  - package-ecosystem: 'npm'
+    commit-message:
+      prefix: 'chore'
+      include: 'scope'
+    directory: '/'
+    ignore:
+      - dependency-name: 'husky'
+        versions:
+          - '> 4'
+    open-pull-requests-limit: 50
+    schedule:
+      interval: 'daily'
+    versioning-strategy: 'increase'
