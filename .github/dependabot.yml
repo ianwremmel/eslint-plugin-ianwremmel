@@ -5,10 +5,6 @@ updates:
       prefix: 'chore'
       include: 'scope'
     directory: '/'
-    ignore:
-      - dependency-name: 'husky'
-        versions:
-          - '> 4'
     open-pull-requests-limit: 50
     schedule:
       interval: 'daily'
