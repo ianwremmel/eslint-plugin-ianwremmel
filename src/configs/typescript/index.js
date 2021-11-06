@@ -76,6 +76,14 @@ module.exports = {
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/member-delimiter-style': 'error',
     '@typescript-eslint/member-ordering': 'error',
+    '@typescript-eslint/no-use-before-define': [
+      'error',
+      {
+        classes: true,
+        functions: false,
+        variables: true,
+      },
+    ],
     '@typescript-eslint/type-annotation-spacing': 'error',
     'babel/new-cap': 'error',
     'new-cap': 'off',
@@ -83,6 +91,7 @@ module.exports = {
     'no-redeclare': 'off',
     // types don't get picked up as used by eslint
     'no-unused-vars': 'off',
+    'no-use-before-define': 'off',
     'react/prop-types': 'off',
     'valid-jsdoc': 'off',
   },
