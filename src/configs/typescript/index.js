@@ -73,9 +73,11 @@ module.exports = {
       },
     ],
     '@typescript-eslint/consistent-type-assertions': 'error',
+    '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/member-delimiter-style': 'error',
     '@typescript-eslint/member-ordering': 'error',
+    '@typescript-eslint/no-shadow': 'error',
     '@typescript-eslint/no-use-before-define': [
       'error',
       {
@@ -89,6 +91,7 @@ module.exports = {
     'new-cap': 'off',
     'no-dupe-class-members': 'off',
     'no-redeclare': 'off',
+    'no-shadow': 'off',
     // types don't get picked up as used by eslint
     'no-unused-vars': 'off',
     'no-use-before-define': 'off',
