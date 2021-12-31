@@ -71,7 +71,7 @@ workflows:
       - test-node-12
       - test-node-14
       - release:
-          context: org-global
+          context: semantic-release
           filters:
             branches:
               only: master
