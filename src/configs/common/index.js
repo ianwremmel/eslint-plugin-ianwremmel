@@ -9,7 +9,11 @@ module.exports = {
   overrides: [
     // Apply lint to fenced JavaScript code blocks in markdown files.
     {
-      files: ['**/*.md'],
+      files: [
+        '**/*.md',
+        // need the trailing /** to pick up code blocks in markdown files
+        '**/*.md/**',
+      ],
       parserOptions: {
         impliedStrict: true,
       },
