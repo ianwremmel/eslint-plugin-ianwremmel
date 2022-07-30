@@ -6,6 +6,6 @@ module.exports = {
   env: {
     browser: true,
   },
-  extends: ['plugin:compat/recommended'].concat(loadRules(__dirname)),
+  extends: loadRules(__dirname),
   rules: {},
 };
