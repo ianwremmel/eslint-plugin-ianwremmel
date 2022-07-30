@@ -17,14 +17,23 @@ module.exports = {
       // These rules just don't make sense when checking what is, effectively,
       // part of a file
       rules: {
+        '@typescript-eslint/no-unused-vars': 'off',
         'eol-last': 'off',
         'eslint-comments/no-unused-disable': 'error',
         'eslint-comments/no-unused-enable': 'error',
         'eslint-comments/require-description': 'warn',
+        'import/no-unresolved': 'off',
         'no-undef': 'off',
+        'no-unused-vars': 'off',
         'require-jsdoc': 'off',
         strict: 'off',
         'unicode-bom': 'off',
+      },
+    },
+    {
+      files: ['**/stories.*'],
+      rules: {
+        'require-jsdoc': 'off',
       },
     },
   ],
