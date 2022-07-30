@@ -108,5 +108,13 @@ module.exports = {
         'valid-jsdoc': 'off',
       },
     },
+    {
+      files: ['**/*.tsx'],
+      rules: {
+        // <T extends unknown> is necessary in TSX files to prove it's a
+        // generic and not a component
+        '@typescript-eslint/no-unnecessary-type-constraint': 'off',
+      },
+    },
   ],
 };
