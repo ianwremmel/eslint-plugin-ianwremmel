@@ -6,9 +6,6 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:jsx-a11y/recommended',
   ],
-  parserOptions: {
-    sourceType: 'module',
-  },
   rules: {
     // This is really a bad rule. It encourages makinng code harder to type to
     // avoid an error that should be caugh a bunch of other ways.
