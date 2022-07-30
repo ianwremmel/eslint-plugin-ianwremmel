@@ -94,6 +94,9 @@ module.exports = {
         ],
         '@typescript-eslint/type-annotation-spacing': 'error',
         'babel/new-cap': 'error',
+        // import/no-unresolved struggles with typescript files and tsc will
+        // catch the same issue.
+        'import/no-unresolved': 'off',
         'new-cap': 'off',
         'no-dupe-class-members': 'off',
         'no-redeclare': 'off',
