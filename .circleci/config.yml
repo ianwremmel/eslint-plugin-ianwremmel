@@ -13,7 +13,7 @@ save_cache: &save_cache
     - node_modules
 
 docker: &docker
-  - image: 'node:16'
+  - image: 'node:18'
 
 steps: &steps
   - checkout
@@ -41,7 +41,7 @@ jobs:
 
   test-node-16:
     docker:
-      - image: node:16
+      - image: node:18
     steps: *steps
 
   test-node-18:
@@ -51,7 +51,7 @@ jobs:
 
   release:
     docker:
-      - image: node:16
+      - image: node:18
     steps:
       - checkout
       - restore_cache: *restore_cache
