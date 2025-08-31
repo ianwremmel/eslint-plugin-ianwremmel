@@ -21,11 +21,11 @@ easier maintenance and publication.
 
 <!-- toc -->
 
--   [Install](#install)
--   [Usage](#usage)
--   [Maintainer](#maintainer)
--   [Contribute](#contribute)
--   [License](#license)
+- [Install](#install)
+- [Usage](#usage)
+- [Maintainer](#maintainer)
+- [Contribute](#contribute)
+- [License](#license)
 
 <!-- tocstop -->
 
@@ -50,44 +50,44 @@ support plugins in shareable configs, so you'll need to run the following script
 
 ## Usage
 
--   `node`: node scripts
+- `node`: node scripts
 
     ```yaml
     extends:
         - 'plugin:@ianwremmel/ianwremmel/node'
     ```
 
--   `modern`: in browsers via transpilation (be it webpack, webpacker, babel, or
-    typescript)
+- `modern`: in browsers via transpilation (be it webpack, webpacker, babel, or
+  typescript)
 
     ```yaml
     extends:
         - 'plugin:@ianwremmel/ianwremmel/modern'
     ```
 
--   `legacy`: for browsers without transpilation or polyfills
+- `legacy`: for browsers without transpilation or polyfills
 
     ```yaml
     extends:
         - 'plugin:@ianwremmel/ianwremmel/legacy'
     ```
 
--   `universal`: for libraries that'll run in browsers or node. transpilation in
-    browser is assumed
+- `universal`: for libraries that'll run in browsers or node. transpilation in
+  browser is assumed
 
     ```yaml
     extends:
         - 'plugin:@ianwremmel/ianwremmel/universal'
     ```
 
--   `common`: use as a base when none of the others will do
+- `common`: use as a base when none of the others will do
 
     ```yaml
     extends:
         - 'plugin:@ianwremmel/ianwremmel/common'
     ```
 
--   `typescript`: use with modern or universal as appropriate
+- `typescript`: use with modern or universal as appropriate
 
     ```yaml
     extends:
