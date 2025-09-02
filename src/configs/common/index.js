@@ -29,15 +29,8 @@ module.exports = {
         'import/no-unresolved': 'off',
         'no-undef': 'off',
         'no-unused-vars': 'off',
-        'require-jsdoc': 'off',
         strict: 'off',
         'unicode-bom': 'off',
-      },
-    },
-    {
-      files: ['**/stories.*'],
-      rules: {
-        'require-jsdoc': 'off',
       },
     },
   ],
