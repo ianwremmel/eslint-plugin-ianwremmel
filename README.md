@@ -21,6 +21,12 @@ easier maintenance and publication.
 
 <!-- toc -->
 
+-   [Install](#install)
+-   [Usage](#usage)
+-   [Maintainer](#maintainer)
+-   [Contribute](#contribute)
+-   [License](#license)
+
 <!-- tocstop -->
 
 ## Install
