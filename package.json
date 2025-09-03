@@ -2,7 +2,8 @@
   "name": "@ianwremmel/eslint-plugin-ianwremmel",
   "version": "0.0.0-development",
   "description": "",
-  "main": "src/index.js",
+  "main": "src/index.mjs",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git://github.com/ianwremmel/eslint-plugin-ianwremmel.git"
@@ -10,7 +11,7 @@
   "scripts": {
     "build": "npm-run-all build:*",
     "build:readme": "markdown-toc -i --bullets='-' --maxdepth=3  README.md  && prettier --write README.md",
-    "eslint": "ESLINT_USE_FLAT_CONFIG=false eslint",
+    "eslint": "eslint",
     "lint": "npm-run-all lint:*",
     "lint:changelog": "commitlint --from origin/master --to HEAD",
     "lint:es": "npm run --silent eslint -- .",
@@ -29,7 +30,7 @@
   "author": "Ian Remmel <1182361+ianwremmel@users.noreply.github.com>",
   "license": "MIT",
   "lint-staged": {
-    "*.js": "npm run eslint -- "
+    "*.mjs": "npm run eslint -- "
   },
   "release": {
     "branches": [

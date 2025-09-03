@@ -1,4 +1,0 @@
-extends:
-  - './src/configs/node/index.js'
-parserOptions:
-  sourceType: 'script'

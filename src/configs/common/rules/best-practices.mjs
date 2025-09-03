@@ -1,6 +1,6 @@
-'use strict';
 
-module.exports = {
+
+export default {
   rules: {
     'array-callback-return': 'error',
     complexity: ['error', {max: 10}],

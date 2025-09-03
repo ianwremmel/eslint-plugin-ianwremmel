@@ -1,12 +1,10 @@
-'use strict';
+import {loadRules} from '../../lib/helpers.mjs';
 
-const {loadRules} = require('../../lib/helpers');
-
-module.exports = {
+export default {
   env: {
     es6: true,
   },
-  extends: loadRules(__dirname),
+  extends: loadRules(import.meta.url),
   globals: {
     // this is here to specifically allow process.env without marking this as a
     // node-like environment
