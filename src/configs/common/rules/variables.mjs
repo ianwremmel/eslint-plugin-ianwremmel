@@ -1,6 +1,6 @@
-'use strict';
 
-module.exports = {
+
+export default {
   rules: {
     'no-shadow': 'error',
     'no-shadow-restricted-names': 'error',

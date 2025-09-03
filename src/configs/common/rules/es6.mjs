@@ -1,6 +1,6 @@
-'use strict';
 
-module.exports = {
+
+export default {
   rules: {
     'arrow-body-style': ['error', 'as-needed'],
     'arrow-parens': ['error', 'always'],

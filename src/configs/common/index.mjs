@@ -1,10 +1,8 @@
-'use strict';
+import {loadRules} from '../../lib/helpers.mjs';
 
-const {loadRules} = require('../../lib/helpers');
-
-module.exports = {
+export default {
   extends: ['eslint:recommended', 'plugin:eslint-comments/recommended']
-    .concat(loadRules(__dirname))
+    .concat(loadRules(import.meta.url))
     .concat(['plugin:prettier/recommended']),
   overrides: [
     // Apply lint to fenced JavaScript code blocks in markdown files.

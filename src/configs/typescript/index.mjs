@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = {
+export default {
   overrides: [
     {
       extends: [
@@ -18,7 +16,6 @@ module.exports = {
         '@typescript-eslint/ban-ts-comment': 'off',
         '@typescript-eslint/ban-types': [
           'error',
-          /* eslint-disable sort-keys */
           {
             types: {
               String: {
@@ -72,7 +69,6 @@ module.exports = {
               // },
             },
             extendDefaults: false,
-            /* eslint-enable sort-keys */
           },
         ],
         '@typescript-eslint/consistent-type-assertions': 'error',

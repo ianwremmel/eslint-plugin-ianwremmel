@@ -1,6 +1,6 @@
-'use strict';
 
-module.exports = {
+
+export default {
   rules: {
     'no-var': 'error',
     'object-shorthand': 'error',
